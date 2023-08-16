@@ -10,17 +10,15 @@ def add_tuple(tuple_a=(), tuple_b=()):
     Lg_q = len(tuple_a)
     lg_w = len(tuple_b)
     
-    if lg_q < 2:
-        if lg_q == 0:
-            tuple_a = 0, 0
-        else:
-            tuple_a = tuple_a[0], 0
+    if lg_q < 1:
+        tuple_a = (0, 0)
+    else lg_q < 2:
+        tuple_a = (tuple_a[0], 0)
 
-    if lg_w < 2:
-        if lg_w == 0:
-            tuple_b = 0, 0
-        else:
-            tuple_b = tuple_b[0], 0
+    if lg_w < 1:
+        tuple_b = (0, 0)
+    else:
+        tuple_b = (tuple_b[0], 0)
 
-    add_tpl = tuple_a[0] + tupple_b[0], tuple_a[1] + tuple_b[1]
+    add_tpl = (tuple_a[0] + tupple_b[0], tuple_a[1] + tuple_b[1])
     return add_tpl
