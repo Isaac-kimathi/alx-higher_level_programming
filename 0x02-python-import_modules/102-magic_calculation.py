@@ -4,11 +4,11 @@ def magic_calculation(a, b):
 
     from magic_calculation_102 import add, sub
 
-    if x < y:
-        z = add(x, y)
+    if a < b:
+        c = add(a, b)
         for q in range(4, 6):
-            z = add(z, q)
-        return (z)
+            c = add(c, q)
+        return (c)
 
     else:
-        return (sub(x, y))
+        return (sub(a, b))
