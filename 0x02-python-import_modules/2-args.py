@@ -1,13 +1,20 @@
 #!/usr/bin/python3
 # prints the number of and the list of its arguments
-import sys
+def arg_lst(argv)
 
-tally = len(sys.argv) - 1
+tally = len(.argv) - 1
 if tally == 0:
-    print("0 arguments.")
-elif tally == 1:
-    print("1 argument:")
+    print("{:d} arguments.".format(tally))
+    return
 else:
-    print("{} arguments:".format(tally))
-for x in range(tally):
-    print("{}: {}".format(x + 1, sys.argv[x + 1]))
+    if tally == 1:
+        print("{:d} arguments:".format(tally))
+    else:
+        print("{:d} arguments:".format(tally))
+        x = 1
+        while x <= n:
+            print("{:d}: {:s}".format(x, argv[x]))
+            x += 1
+    if __name__ == "__main__":
+        import sys
+        arg_lst(sys.argv)
