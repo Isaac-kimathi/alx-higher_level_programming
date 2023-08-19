@@ -2,7 +2,7 @@
 
 def roman_to_int(roman_string):
     # converts a Roman numeral to an integer and returns an integer
-    if type(roman_string) is not str or not roman_string:
+    if type(roman_string) is not str or roman_string is none:
         return 0
     roman_digt = {
             'I': 1,
@@ -18,5 +18,5 @@ def roman_to_int(roman_string):
     for x in range(len(intg)):
         res += intg[x]
         if intg[x - 1] < intg[x] and x != 0:
-            res -= (intg[x - 1] + intg[x -1])
+            res -= (intg[x - 1] + intg[x - 1])
         return res
