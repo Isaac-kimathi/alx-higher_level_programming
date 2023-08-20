@@ -2,7 +2,7 @@
 
 def roman_to_int(roman_string):
     # converts a Roman numeral to an integer and returns an integer
-    if type(roman_string) is not str or roman_string is none:
+    if type(roman_string) is not str or is not roman_string:
         return 0
     roman_dict = {
             'I': 1,
