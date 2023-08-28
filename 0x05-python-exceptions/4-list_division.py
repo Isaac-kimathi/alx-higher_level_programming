@@ -9,8 +9,8 @@ def list_division(my_list_1, my_list_2, list_length):
     Returns:
         A new list of length list_length containing all the divisions.
     """
-    nw_lst = []
-    for n in range(list_length):
+    new_list = []
+    for n in range(0, list_length):
         try:
             res = my_list_1[n] / my_list_2[n]
         except ZeroDivisionError:
@@ -23,5 +23,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             res = 0
         finally:
-            nw_lst.append(res)
+            new_list.append(res)
     return new_list
