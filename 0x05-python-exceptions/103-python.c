@@ -65,10 +65,10 @@ void print_python_bytes(PyObject *p)
 		printf("[.] bytes object info\n");
 		printf("  size: %zd\n", size);
 		printf("  trying string: %s\n", dt);
-		rintf("  first %d bytes: ", size > 10 ? 10 : (int)size);
+		printf("  first %d bytes: ", size > 10 ? 10 : (int)size);
 		for (x = 0; x < (size > 10 ? 10 : size); x++)
 		{
-			printf("%02x", (unsigned char)data[x]);
+			printf("%02x", (unsigned char)dt[x]);
 			if (x != (size > 10 ? 9 : size - 1))
 			{
 				printf(" ");
@@ -92,7 +92,7 @@ void print_python_float(PyObject *p)
 	double val;
 	if (PyFloat_Check(p))
 	{
-		double val = PyFloat_AS_DOUBLE(p);
+		val = PyFloat_AS_DOUBLE(p);
 		printf("[.] float object info\n");
 		printf("  value: %f\n", val);
 	}
