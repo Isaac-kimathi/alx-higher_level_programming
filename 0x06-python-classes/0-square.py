@@ -7,4 +7,9 @@ class Square:
     """
     This empty class represents a square
     """
-    pass
+
+    def do_nothing(self):
+        """
+        This method does nothing
+        """
+        pass
