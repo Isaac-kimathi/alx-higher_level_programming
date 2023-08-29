@@ -8,8 +8,8 @@ class Square:
     This empty class represents a square
     """
 
-    def do_nothing(self):
+    def __init__(self):
         """
-        This method does nothing
+        Initializes a new square instance
         """
         pass
