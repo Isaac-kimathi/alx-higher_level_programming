@@ -9,8 +9,8 @@ class Rectangle:
         """
         Initializing the rectangle class
         PARAS:
-            height: represents the height of the rectangle
             weight: represents the width of the rectangle
+            height: represents the height of the rectangle
         Raises:
             TypeError: if size isn't integer
             ValueError: if size is less than zero
