@@ -1,30 +1,23 @@
 #!/usr/bin/pythhon3
-"""A class that defines a rectangle"""
+"""A class defining a rectangle"""
 
 
 class Rectangle:
-    """class that represents a rectangle"""
+    """Class that represents a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """Initializing the rectangle class
-        Args:
-            weight: represents the width of the rectangle
-            height: represents the height of the rectangle
-        Raises:
-            TypeError: if size is not integer
-            ValueError: if size is less than zero
-        """
+        """Writes the width and height elements"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """retrieval of width attritube"""
+        """Getter for width element"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setting of width attribute"""
+        """setter of width element"""
         if not isinstance(value, int):
             raise TypeError("Width must be an integer")
         if value < 0:
@@ -33,12 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """retrieval of height attritube"""
+        """getter of height element"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setting of height attritube"""
+        """setter height element"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
