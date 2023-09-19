@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains a base class"""
 
+
 class Base:
     """Base class for all class created"""
 

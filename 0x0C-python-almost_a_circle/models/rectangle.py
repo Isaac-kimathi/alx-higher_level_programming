@@ -89,8 +89,9 @@ class Rectangle(Base):
             for column in range(self.__width):
                 print("#", end="")
             print()
+
     def __str__(self):
-        """redefinement of the format for the string represenation of a class"""
+        """redefines of the format for the string represenation of a class"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
 
@@ -133,6 +134,7 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
         rec_dictionary = {'id': self.id, 'width': self.__width,
-                'height': self.__height, 'x': self.__x, 'y': self.__y}
+                          'height': self.__height, 'x': self.__x,
+                          'y': self.__y}
 
         return rec_dictionary
