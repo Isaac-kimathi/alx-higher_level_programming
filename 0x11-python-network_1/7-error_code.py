@@ -4,7 +4,7 @@ If the HTTP status code is greater than or equal to 400, print: Error code follo
 import sys
 import requests
 
-if __name__ == __main__:
+if __name__ =="__main__":
     url = sys.argv[1]
 
     res = requests.get(url)
