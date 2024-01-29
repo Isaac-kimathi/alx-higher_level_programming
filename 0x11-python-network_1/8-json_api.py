@@ -7,10 +7,10 @@ if __name__ == "__main__":
     ltr = "" if len(sys.argv) == 1 else sys.argv[1]
     upload = {"q": ltr}
 
-    r = requests.post("http://0.0.0.0:50/search_user", data=upload)
+    r = requests.post("http://0.0.0.0:5000/search_user", data=upload)
     try:
         res = r.json()
-        if response == {}:
+        if res == {}:
             print("No result")
         else:
             print("[{}] {}".format(res.get("id"), res.get("name")))
