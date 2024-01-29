@@ -7,8 +7,8 @@ if __name__ == "__main__":
     username = sys.argv[1]
     token = sys.argv[2]
 
-    url = f"https://api.github.com/users/{Isaac-Kimathi}"
-    headers = {"Authorization": f"token {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}"}
+    url = f"https://api.github.com/users/Isaac-Kimathi"
+    headers = {"Authorization": f"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"}
 
     response = requests.get(url, headers=headers)
 
