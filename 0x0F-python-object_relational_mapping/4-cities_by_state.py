@@ -9,13 +9,12 @@ if __name__ == '__main__':
     db_connect = db.connect(host="localhost", port=3306,
             user=argv[1], passwd=argv[2], db=argv[3])
 
-    with db_connect.cursor() as db_cursor:
-        db_cursor.execute("SELECT cities.id, cities.name, states.name \
-                            FROM cities JOIN states ON cities.state_id \
-                            = states.id ORDER BY cities.id ASC")
+    my_cursor = db.cursor()
+    my_cursor.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON state_id = cities.states_id ORDER BY cities.id ASC")
     
-    sel_rws = db_cursor.fetchall()
+    sel_rws = my_cursor.fetchall()
 
-    if sel_rws is not None:
-        for row in sel_rws:
-            print(row)
+    for row in sel_rws:
+        print(row)
+    my_cursor.close()
+    db.close()
